@@ -28,7 +28,7 @@ const uint8_t MIRAGE_SWING_VERTICAL = 0x1A;
 
 const uint8_t MIRAGE_POWER_OFF = 0xC0;
 
-const uint8_t MIRAGE_TEMP_OFFSET = 0x5C;
+const uint8_t MIRAGE_TEMP_OFFSET = 0x5B;  // ponytail: calibrated for this ELuxe unit (upstream 0x5C ran 1C high — 0x6E read as 19). Flip ±1 if HA setpoint != AC display.
 
 void MirageClimate::transmit_state() {
   this->last_transmit_time_ = millis();  // setting the time of the last transmission.
